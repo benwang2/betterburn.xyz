@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body, html {
+    height: 95%;
+}
+
+body {
+    display:inline;
+    background-color: #221616;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;
+    font-size: 36;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;
+    font-size: 24;
+    font-weight: lighter;
+    text-align: center;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: rgb(185, 190, 194);
+    font-size: 20;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255,255,255);
+    font-weight: bold;
+}
+
+.section {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.project {
+    display: inline-block;
+    background: #232323;
+    width: 250px;
+    border-radius: 10px;
+    height: 270px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 50px; margin-right: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.project h3 {
+    padding-left: auto;
+    padding-right: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20;
+    color:rgb(255, 255, 255)
+}
+
+.project img {
+    max-width:90%;
+    max-height:90%;
+}
+
+
+button {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    color: aliceblue;
+    background-color: rgba(0,0,0,0);
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+#discord-invite {
+    font-family: 'Open Sans', sans-serif;
+    text-align: right;
+    padding: 4px;
+    padding-right: 10px;
+    width: 160px;
+    height: 36px;
+    background-color: #7289DA;
+    border-radius: 4px;
+    position: relative;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+#discord-invite img{
+    top: 2px;
+    left: 4px;
+    position: absolute;
+}
+
+#discord-invite:hover {
+    background-color: #677bc4
+}
