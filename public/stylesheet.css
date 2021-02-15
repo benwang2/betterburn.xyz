@@ -6,12 +6,8 @@ body, html {
 }
 
 body {
-    display:inline;
     background-color: #221616;
     text-align: center;
-    justify-content: center;
-    align-content: center;
-    position: relative;
 }
 
 h1 {
@@ -41,29 +37,85 @@ a {
     font-weight: bold;
 }
 
+b {
+    font-weight: bold;
+    color: rgb(255, 255, 255)
+}
+
+table {
+    background-color: #232323;
+    border-radius: 6px;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+td {
+    border: 2px;
+}
+
+input {
+    background-color: #383838;
+    color:rgb(255, 255, 255);
+    border-width:0px;
+    border:none;
+    box-shadow: inset;
+    box-decoration-break: none;
+    outline-width: 0;
+}
+
+select {
+    background-color: #383838;
+    color:rgb(255, 255, 255);
+    border-width:0px;
+    border:none;
+    box-shadow: inset;
+    box-decoration-break: none;
+}
+
+footer {
+    bottom: 0;
+    padding-right: 20px;
+    height: 2vh;
+    color:rgb(255, 255, 255);
+    font-family: 'Open Sans', sans-serif;
+    text-align: right;
+    font-weight: bold;
+}
+
 .section {
+    width: 50%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15vh;
+    margin-top: 12vh;
+    justify-content: center;
 }
 
 .row {
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .project {
     display: inline-block;
     background: #232323;
     width: 250px;
+    min-width: 150px;
+    max-width: 250px;
     border-radius: 10px;
     height: 270px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-left: 50px; margin-right: 50px;
-    margin-bottom: 20px;
     text-align: center;
     position: relative;
+    cursor: pointer;
+}
+
+.spacer {
+    min-width: 20px;
+    max-width: 250px;
 }
 
 .project h3 {
@@ -86,10 +138,17 @@ button {
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
     color: aliceblue;
-    background-color: rgba(0,0,0,0);
+    background-color: rgb(42, 42, 42);
     font-size: 16px;
-    padding: 0;
+    border-radius: 6px;
+    padding: 4px;
     margin: 0;
+    outline: none;
+}
+
+#betterburn-logo {
+    box-shadow: 0px 0px 100px 20px rgb(134, 38, 0);
+    border-radius: 50%;
 }
 
 #discord-invite {
@@ -102,7 +161,6 @@ button {
     background-color: #7289DA;
     border-radius: 4px;
     position: relative;
-    outline: none;
     transition: background-color 0.3s ease;
 }
 
@@ -114,4 +172,12 @@ button {
 
 #discord-invite:hover {
     background-color: #677bc4
+}
+
+#github-reference {
+    background-color: #7289DA;
+    height: 36px;
+    width: 44px;
+    border-radius: 4px;
+    position: relative;
 }
