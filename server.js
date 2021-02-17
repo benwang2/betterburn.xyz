@@ -25,7 +25,6 @@ app.use(function(req, res, next) {
     res.sendFile(__dirname + '/public/pages/404.html');
 });
 
-
 let server = app.listen(3000, function(){
     console.log("App server is running on port 3000");
     console.log("to end press Ctrl + C");
