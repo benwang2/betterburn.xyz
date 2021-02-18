@@ -1,0 +1,36 @@
+.carousel {
+    display: flex;
+    flex-direction: row nowrap;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    box-shadow: inset 0px 0px 25px 25px #221616;  
+}
+
+.carousel:before, .carousel:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  top: 0;
+  height: 100%;
+  pointer-events: none; /*makes the linkes behind clickable*/
+}
+
+.carousel:before {
+    left: 0;
+    background: linear-gradient(to right, rgba(34, 22, 22, 1) 20px, rgba(34, 22, 22, 0));
+}
+
+.carousel:after {
+    right: 0;
+    background: linear-gradient(to left, rgba(34, 22, 22, 1) 20px, rgba(34, 22, 22, 0));
+}
+
+.carousel :nth-child(n){
+    border-radius: 4px;
+    margin: 8px;
+    box-shadow: 10px 5px #000;
+}

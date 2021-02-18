@@ -1,0 +1,45 @@
+.discord-invite {
+    font-family: 'Open Sans', sans-serif;
+    text-align: right;
+    padding: 4px;
+    padding-right: 10px;
+    width: 160px;
+    height: 36px;
+    background-color: #7289DA;
+    border-radius: 4px;
+    margin-right: 10px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.discord-invite .icon{
+    top: 2px;
+    left: 4px;
+    position: absolute;
+    background-image: url('../images/discord.jpg');
+    background-size: cover;
+    height: 32px;
+    width: 32px;
+}
+
+.discord-invite:hover {
+    background-color: #677bc4
+}
+
+.github-reference {
+    background-color: #4e4e4e;
+    height: 36px;
+    width: 44px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.github-reference .icon {
+    top: 2px;
+    left: 6px;
+    position: absolute;
+    background-image: url('../images/github.jpg');
+    background-size: cover;
+    height: 32px;
+    width: 32px;
+}
