@@ -32,6 +32,11 @@
     width: 44px;
     border-radius: 4px;
     position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.github-reference:hover {
+    background-color: #5d5d5d;
 }
 
 .github-reference .icon {

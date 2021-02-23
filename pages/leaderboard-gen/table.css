@@ -1,0 +1,57 @@
+table {
+    background-color: #232323;
+    border-radius: 6px;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+    max-width: max-content;
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+td {
+    border: 2px;
+    width: max-content;
+}
+
+input {
+    background-color: #383838;
+    color:rgb(255, 255, 255);
+    border:none;
+    outline:none;
+    outline-width: 0;
+}
+
+select {
+    display: inline-block;
+    background-color: #383838;
+    color:rgb(255, 255, 255);
+    border-width:0px;
+    border:2px;
+    box-shadow: inset;
+    box-decoration-break: none;
+}
+
+.row {
+    padding: 6px;
+}
+
+option {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    color: aliceblue;
+    background-color: rgb(42, 42, 42);
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 4px;
+    margin: 0;
+    outline: none;
+}

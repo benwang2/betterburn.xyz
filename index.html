@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Betterburn.xyz</title>
-        <link rel="icon" href="resources/images/favicon.ico">
-        <link rel="stylesheet" href="resources/css/primary.css">
-        <link rel="stylesheet" href="resources/css/buttons.css">
-        <link rel="stylesheet" href="resources/css/corners.css">
-        <link rel="stylesheet" href="pages/landing/page.css">
+        <title>Betterburn</title>
+        <link rel="icon" href="/resources/images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="/resources/css/primary.css">
+        <link rel="stylesheet" type="text/css" href="/resources/css/buttons.css">
+        <link rel="stylesheet" type="text/css" href="/resources/css/corners.css">
+        <link rel="stylesheet" type="text/css" href="/pages/landing/page.css">
     </head>
     <body>
         <a class="github-corner" href="https://github.com/benwang2/betterburn.xyz" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
@@ -24,18 +24,33 @@
                         <div class="icon"></div>
                         Add to Discord
                     </button>
-                    <button class="github-reference" aria-label="View source on GitHub" style="background-color: #4e4e4e;" href="https://github.com/benwang2/betterburn" onclick="window.location='https://github.com/benwang2/betterburn'">
+                    <button class="github-reference" aria-label="View source on GitHub" href="https://github.com/benwang2/betterburn" onclick="window.location='https://github.com/benwang2/betterburn'">
                         <div class="icon"></div>
                     </button>
                 </div>
-                <div style="padding:10px"></div>
+                <padding style="padding:20px"></padding>
+                <div class="fade-left"></div>
                 <div class="carousel">
                     <img src="pages/landing/preview1.jpg" style="height:300px;width:auto;">
                     <img src="pages/landing/preview2.jpg" style="height:300px;width:auto;">
                     <img src="pages/landing/preview3.jpg" style="height:300px;width:auto;">
                 </div>
             </div>
+            <padding style="padding:20px"></padding>
             <div class="section">
+                <h1>tools</h1>
+                <p>collection of rivals of aether-related tools
+                    <div class="carousel">
+                        <div class="card" onclick="window.scroll({top:0,left:0,behavior:'smooth'});setTimeout(()=>{window.location='/leaderboard-gen'},500)">
+                            <h2>leaderboard gen</h2>
+                            <img src="pages/landing/preview4.jpg" style="height:80%;width:auto;">
+                        </div>
+                        <div class="card">
+                            <h2>replay editor</h2>
+                            <p>no preview yet...</p>
+                        </div>
+                    </div>
+                </p>
             </div>
         </div>
     </body>

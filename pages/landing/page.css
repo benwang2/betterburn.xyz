@@ -29,8 +29,36 @@
     background: linear-gradient(to left, rgba(34, 22, 22, 1) 20px, rgba(34, 22, 22, 0));
 }
 
-.carousel :nth-child(n){
+.carousel > img{
     border-radius: 4px;
     margin: 8px;
     box-shadow: 10px 5px #000;
+    transition: all 0.2s ease;
+}
+
+.card {
+    background-color: rgb(54,57,63);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-grow: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 4px;
+    margin: 8px;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    box-shadow: 10px 5px #000;
+}
+
+.card:hover{
+    background-color: rgb(77, 79, 83);
+}
+
+.card h2 {
+    text-align: center;
+    min-width: 300px;
+    white-space: nowrap;
+    margin-bottom: 0;
 }

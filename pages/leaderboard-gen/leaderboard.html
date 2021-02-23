@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Betterburn</title>
+        <link rel="icon" href="/resources/images/favicon.ico">
+        <link rel="stylesheet" href="/resources/css/primary.css">
+        <link rel="stylesheet" href="/resources/css/buttons.css">
+        <link rel="stylesheet" href="/resources/css/corners.css">
+        <link rel="stylesheet" href="/pages/leaderboard-gen/table.css">
+        <script src="/pages/leaderboard-gen/script.js"></script>
+        <script>
+            let numRows = 0
+            function generateNewRow(){
+                if (numRows<15){
+                    numRows++
+                    let clone=document.getElementsByClassName('row-base')[0].cloneNode(true);
+                    clone.children.item(0).innerHTML = numRows
+                    clone.style = "";
+                    clone.setAttribute("id", "row-"+numRows)
+                    for (let i = 0; i < clone.childNodes.length; i++){
+                        let child = clone.childNodes[i]
+                        if (child.childNodes.length > 0){
+                            for (let j = 0; j < child.childNodes.length; j++){
+                                child.childNodes[j].id += "-"+numRows;
+                            }
+                        }
+                    }
+                    document.getElementById('data-container').appendChild(clone)
+                }
+            }
+            function deleteNewestRow(){
+                if (numRows > 1){
+                    let rows = document.getElementsByClassName('row-base')
+                    rows[rows.length-1].remove()
+                    numRows--
+                }
+            }
+            window.onload=function(){
+                document.getElementsByClassName("emblem")[0].style="transition: all 0.5s;opacity:0;"
+                script_onLoaded()
+                setTimeout(()=>{
+                    let sections = document.getElementsByClassName("section");
+                    sections[0].style="display:none;"
+                    sections[1].style="display:default;"
+                },500)
+                generateNewRow();
+            }
+        </script>
+    </head>
+    <body>
+        <a class="github-corner" href="https://github.com/benwang2/betterburn.xyz" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+        </svg></a>
+        <div class="wrapper">
+            <padding style="padding:-20px"></padding>
+            <!-- "smooth" transition -->
+            <div class="section">
+                <div class="emblem" style="transition: all 0.5s"></div>
+            </div>
+            <!-- Leaderboard part -->
+            <div class="section" style="display: none;">
+                <h1>leaderboard generator</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <td><b>rank</b></td>
+                            <td><b>name</b></td>
+                            <td><b>main</b></td>
+                            <td><b>secondary</b></td>
+                            <td><b>rank delta</b></td>
+                        </tr>
+                    </thead>
+                    <tbody id="data-container">
+                        <tr class="row-base" style="display: none" value="0">  <!--  -->
+                            <td><p>0.</p></td>
+                            <td><input type="text" id="row-name" value="" style="text-align: center;"></td>
+                            <td><select id="row-main">
+                                <option value="zetterburn">Zetterburn</option>
+                                <option value="orcane">Orcane</option>
+                                <option value="wrastor">Wrastor</option>
+                                <option value="kragg">Kragg</option>
+                                <option value="forsburn">Forsburn</option>
+                                <option value="maypul">Maypul</option>
+                                <option value="absa">Absa</option>
+                                <option value="etalus">Etalus</option>
+                                <option value="ori">Ori and Sein</option>
+                                <option value="clairen">Clairen</option>
+                                <option value="ranno">Ranno</option>
+                                <option value="sylvanos">Sylvanos</option>
+                                <option value="elliana">Elliana</option>
+                                <option value="shovel knight">Shovel Knight</option>
+                            </select></td>
+                            <td><select id="row-secondary">
+                                <option value="none">None</option>
+                                <option value="zetterburn">Zetterburn</option>
+                                <option value="orcane">Orcane</option>
+                                <option value="wrastor">Wrastor</option>
+                                <option value="kragg">Kragg</option>
+                                <option value="forsburn">Forsburn</option>
+                                <option value="maypul">Maypul</option>
+                                <option value="absa">Absa</option>
+                                <option value="etalus">Etalus</option>
+                                <option value="ori">Ori and Sein</option>
+                                <option value="clairen">Clairen</option>
+                                <option value="Ranno">Ranno</option>
+                                <option value="sylvanos">Sylvanos</option>
+                                <option value="elliana">Elliana</option>
+                                <option value="shovel knight">Shovel Knight</option>
+                            </select></td>
+                            <td style="align-items: flex-start;">
+                                <input type="number" id="row-rank-delta" value="0" min="0" style="text-align: center;">
+                                <select id="row-rank-sign">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                    <option value="new">new</option>
+                                </select>                            
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row" style="flex-">
+                    <input type="text" id="pr-title" value="" style="text-align: center; border-radius:6px;" placeholder="title"></ul>
+                    <div class="padding"></div>
+                    <button onclick="generateNewRow()">new row</button>
+                    <div class="padding"></div>
+                    <button onclick="deleteNewestRow()">del row</button>
+                    <div class="padding"></div>
+                    <button onclick="generateLeaderboard()">generate</button>
+                </div>
+                <canvas id="leaderboard" width="1080" height="944" style="max-width:1082px;max-height:947px;max-height: 100vh; max-width: 114vh;"></canvas>
+            </div>
+        </div>
+    </body>
+</html>
