@@ -1,4 +1,4 @@
-var canvas, ctx;
+var canvas, ctx, backdrop;
 var characters = ["zetterburn","orcane","forsburn","etalus","ori","clairen","elliana","wrastor","kragg","maypul","absa","ranno","sylvanos","shovel knight"]
 var charicons, charicons2, backdrop;
 var font_colors =  [
@@ -8,7 +8,8 @@ var font_colors =  [
     ["rgba(0, 0, 0, 0)","rgba(0,0,0,255)","rgba(200,200,200,255)"] // Rank new color set
 ]
 
-function script_onLoaded(){
+window.addEventListener("load",function(){
+    console.log("loaded")
     canvas = document.getElementById("leaderboard")
     if (canvas.getContext){
         ctx = canvas.getContext("2d");
@@ -24,7 +25,7 @@ function script_onLoaded(){
     charicons.src = "https://raw.githubusercontent.com/benwang2/RoA-Ranking-Generator/main/assets/charicons.png"
     charicons2 = new Image();
     charicons2.src = "https://raw.githubusercontent.com/benwang2/RoA-Ranking-Generator/main/assets/charicons2.png"
-}
+})
 
 var cmatrix = {}
 {

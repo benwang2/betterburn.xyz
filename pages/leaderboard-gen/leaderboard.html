@@ -37,13 +37,12 @@
             }
             window.onload=function(){
                 document.getElementsByClassName("emblem")[0].style="transition: all 0.5s;opacity:0;"
-                script_onLoaded()
+                generateNewRow();
                 setTimeout(()=>{
                     let sections = document.getElementsByClassName("section");
                     sections[0].style="display:none;"
                     sections[1].style="display:default;"
                 },500)
-                generateNewRow();
             }
         </script>
     </head>
@@ -121,7 +120,7 @@
                     </tbody>
                 </table>
                 <div class="row" style="flex-">
-                    <input type="text" id="pr-title" value="" style="text-align: center; border-radius:6px;" placeholder="title"></ul>
+                    <input type="text" id="pr-title" value="" style="text-align:center;border-radius:6px;" placeholder="title"></ul>
                     <div class="padding"></div>
                     <button onclick="generateNewRow()">new row</button>
                     <div class="padding"></div>
